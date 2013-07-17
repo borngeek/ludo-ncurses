@@ -22,7 +22,7 @@ TARGET = ludo-ncurses
 COMPILEFLAGS = -lncurses
 
 $(TARGET): ludo.o
-  -$(CC) -o $(TARGET) ludo.o $(COMPILEFLAGS)
+	-$(CC) -o $(TARGET) ludo.o $(COMPILEFLAGS)
 	rm ludo.o
 ludo.o: ludo.c
 	$(CC) -c ludo.c
