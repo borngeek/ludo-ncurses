@@ -1,3 +1,19 @@
+/*****************************************
+* Developer - Anirban Chakraborty        *
+* Name - ludo-ncurses                    *
+* File - Documentation                   *
+* Date - Wed Jul 17 18:56:26 IST 2013    *
+* Project - NCURSES based ludo.          * 
+* License - Developers and users are     *
+*           not supposed to remove or    *
+*           alter this block of comment  *
+*           although they are free to    *
+*           alter the status of the      *
+*           project. I must be intimated *
+*           of any developments about    *
+*           this project whatsoever.     *
+* Status - Abandoned                     *
+******************************************/
 coordinates x,y of the cell
      v v
   +-+-+-+
