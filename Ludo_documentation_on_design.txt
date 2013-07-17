@@ -1,0 +1,57 @@
+coordinates x,y of the cell
+     v v
+  +-+-+-+
+  |P|x|y|
+  +-+-+-+
+   ^  
+  short int presence of the pawn
+
+init_ludo	initiates the arrays for pawns of all colours.			#DONE
+draw_board 	draws the board and colors in the cells.			#DONE
+init_pawns 	initiate pawns at starting point.				#DONE
+move_pawns 	move pawn no. (arg3) of colour (arg1) by the moveby (arg3)
+  		in the array and not on the board.numofpawn is the number of pawns in
+  		the cell.							#DONE
+draw_pawns	draw and colour path and pawns on the board.
+push and pop 	does the said tasks on the starting points of each colour.	#DONE
+ 
+When pawns move in:
+  	> singles they will be numbered and coloured to which they belong.
+  	> more than one they will be numbered as many as there are pawns int
+		that block in black with background coloured to which they belong.
+
+move_pawns	> Greater 'int pon'(arg3) imply pawn is nearer to home. 'pon=0' 
+			imply pon is at starting point.
+ 		> 'int numofpawn'(arg2) refer to the number of pawns moving together.
+
+msg[4]	In this  x, y will contain the starting points of messages display
+	P will contain error message id.
+		0 - No message.
+		1 - dice value.
+		2 - That pawn not out. enter a valid pawn id.
+		3 - invalid pawn id. enter a valid pawn id.
+		4 - bad! bad dice.(3 sixes bad move)
+		5 - your pawn(s) captured. ####message TO BE CHANGED####
+		6 - All pawns are out. Enter a valid pawn id.
+ 
+The path is divided into 3 parts:
+ i> the part before a lagging colour reaches the starting point of leading
+ 	colour.
+ ii> the part both moves together before the lagging goes into home cells.
+ iii> and home cells.
+
+ In move_pawns and pontopos pon=0 refers to a pawn that is at the starting
+ point pos=0 is the cell with index zero in the path. pos = -1 for pon = 0.
+
+ 
+BUGS AND DEBUGGED ONES:
+ 
+>pawns could move out without a six thrown. # FIXED
+>In funct. pontopos redundant unnecessary codes to be removed. # FIXED
+>In funct. move_pawns if numofpawn == 0 then floating point exception 
+ 	occurs. # FIXED
+>In funct. check pos value ranges must be more tightened. ####TO BE FIXED####
+>In funct. moves or move_pawns checking of whether or not an occupied cell has
+ 	a pawn of same colour or not has to be implemented. ####TO BE FIXED####
+>In funct. move_pawns pushing of pawns to home cells must be implemented.
+ 	####TO BE FIXED####
